@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f06, #ff33cc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .invitation {
+            background: linear-gradient(to bottom right, #ff99cc, #ffcc99);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            font-size: 24px;
+            color: #fff;
+        }
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+        button {
+            background: linear-gradient(to bottom, #ff0066, #ff33cc);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(to bottom, #ff0055, #ff3399);
+        }
+        #rsvpMessage {
+            display: none;
+            color: #009900;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation">
+        <h1>Birthday Invitation</h1>
+        <p>You're invited to a birthday party!</p>
+        <p>Date: September 30, 2023</p>
+        <p>Time: 7:00 PM</p>
+        <p>Location: 123 Main Street, City</p>
+        
+        <button id="rsvpButton">RSVP</button>
+        <p id="rsvpMessage">Thank you for RSVPing!</p>
+    </div>
+
+    <script>
+        const rsvpButton = document.getElementById("rsvpButton");
+        const rsvpMessage = document.getElementById("rsvpMessage");
+
+        rsvpButton.addEventListener("click", () => {
+            rsvpButton.style.display = "none";
+            rsvpMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>
